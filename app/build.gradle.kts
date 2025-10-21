@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.pokebox"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.pokebox"
@@ -36,7 +36,10 @@ android {
 }
 
 dependencies {
-
+    implementation(libs.gson)
+    implementation("com.github.bumptech.glide:glide:5.0.5")
+    implementation(libs.okhttp)
+    implementation(libs.pokemon.tcg.sdk.kotlin)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -46,3 +49,4 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
+
