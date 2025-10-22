@@ -17,6 +17,9 @@
         android:theme="@style/Theme.Pokebox"
         tools:targetApi="31">
         <activity
+            android:name=".activities.MainMenu"
+            android:exported="false" />
+        <activity
             android:name=".activities.ListCardsSearch"
             android:exported="false" />
         <activity

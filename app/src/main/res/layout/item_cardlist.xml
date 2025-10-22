@@ -16,6 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:adjustViewBounds="true"
+        android:paddingStart="20dp"
         android:scaleType="fitCenter"
         android:layout_weight="2"
         />

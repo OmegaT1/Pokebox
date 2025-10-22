@@ -12,6 +12,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.bumptech.glide.Glide
 import com.example.pokebox.activities.ListSetsSearch
+import com.example.pokebox.activities.MainMenu
 import com.example.pokebox.data.PokemonCard
 import com.example.pokebox.data.PokemonSet
 import com.google.gson.Gson
@@ -84,7 +85,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         btlista.setOnClickListener {
-            cargardatos(sets, "base1")
+            val i = Intent(this, MainMenu::class.java)
+            this.startActivity(i)
         }
 
 
