@@ -30,13 +30,13 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/btloadSV8"
+        android:id="@+id/btLoadSets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="41dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:text="Surging Sparks"
+        android:text="Lista Sets"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btloadSV9"
         app:layout_constraintTop_toTopOf="parent" />
@@ -55,10 +55,21 @@
         android:id="@+id/listview"
         android:layout_width="409dp"
         android:layout_height="544dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="128dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/testtexto" />
+
+    <ImageView
+        android:id="@+id/setimage"
+        android:layout_width="99dp"
+        android:layout_height="90dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/listview"
+        app:layout_constraintEnd_toStartOf="@+id/testtexto"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

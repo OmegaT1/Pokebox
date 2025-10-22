@@ -1,9 +1,13 @@
 package com.example.pokebox.data
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class PokemonCard(
-    val id: String,
-    val name: String,
-    val supertype: String,
+    val id: String?,
+    val name: String?,
+    val supertype: String?,
     val subtypes: List<String>?,
     val level: String?,
     val hp: String?,
@@ -23,39 +27,45 @@ data class PokemonCard(
     val nationalPokedexNumbers: List<Int>?,
     val legalities: Legalities?,
     val images: CardImages?
-)
+)  : Parcelable
 
+@Parcelize
 data class Ability(
     val name: String,
     val text: String,
     val type: String
-)
+) : Parcelable
 
+@Parcelize
 data class Attack(
     val name: String,
     val cost: List<String>?,
     val convertedEnergyCost: Int?,
     val damage: String?,
     val text: String?
-)
+) : Parcelable
 
+@Parcelize
 data class Weakness(
     val type: String,
     val value: String
-)
+) : Parcelable
 
+@Parcelize
 data class Resistance(
     val type: String,
     val value: String
-)
+) : Parcelable
 
+@Parcelize
 data class Legalities(
     val unlimited: String?,
     val expanded: String?,
     val standard: String?
-)
+) : Parcelable
 
+@Parcelize
 data class CardImages(
     val small: String?,
     val large: String?
-)
+) : Parcelable

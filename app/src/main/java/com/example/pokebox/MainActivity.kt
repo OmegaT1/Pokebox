@@ -1,13 +1,17 @@
 package com.example.pokebox
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.ListView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.bumptech.glide.Glide
+import com.example.pokebox.activities.ListSetsSearch
 import com.example.pokebox.data.PokemonCard
 import com.example.pokebox.data.PokemonSet
 import com.google.gson.Gson
@@ -26,7 +30,38 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val btsv8 = findViewById<Button>(R.id.btloadSV8)
+        /*
+        *
+        * Filtros para la búsqueda
+        * todos tendrán la opción de expandir o colapsar
+        *
+        * Búsqueda por nombre (EditText)
+        *
+        * Carta (checkboxes)
+        * Pokémon, Entrenador, Energía
+        *
+        * Tipo de carta (checkboxes)
+        * Añadir aqui todos los tipos (Fase 1, 2, Básico, EX, Prisma, etc)
+        *
+        * Tipo (checkboxes)
+        * Planta, Fuego, Agua, etc. (si se puede, poner iconos)
+        *
+        * Legalidad (checkboxes)
+        * Unlimited, Expanded, Standard
+        *
+        * Rareza (checkboxes)
+        * Common, Uncommon, Rare, SIR, Amazing Rare, etc. (si se puede, poner iconos)
+        *
+        * Artista (List)
+        * Lista de los artistas/ilustradores en orden alfabético
+        *
+        * Tiene Habilidad (una checkbox)
+        *
+        * Vida (rango Desde-Hasta. si no se pone nada será null/0-9999999)
+        *
+        * */
+
+        val btloadsets = findViewById<Button>(R.id.btLoadSets)
         val btsv9 = findViewById<Button>(R.id.btloadSV9)
         val btlista = findViewById<Button>(R.id.btcard)
 
@@ -39,8 +74,9 @@ class MainActivity : AppCompatActivity() {
         Sreader.close()
 
 
-        btsv8.setOnClickListener{
-            cargardatos(sets, "sv8")
+        btloadsets.setOnClickListener{
+            val i = Intent(this, ListSetsSearch::class.java)
+            this.startActivity(i)
         }
 
         btsv9.setOnClickListener{
@@ -64,6 +100,7 @@ class MainActivity : AppCompatActivity() {
     fun cargardatos(sets : List<PokemonSet>, id: String) {
 
         val listView = findViewById<ListView>(R.id.listview)
+        val iview = findViewById<ImageView>(R.id.setimage)
         val tview = findViewById<TextView>(R.id.testtexto)
 
         val set : PokemonSet? = cargarinfoset(sets, id)
@@ -72,9 +109,12 @@ class MainActivity : AppCompatActivity() {
         val total : Int = set?.total ?: 0
         val printedtotal : Int = set?.printedTotal ?: 0
 
-        tview.text = "Set name: " + nombre +
-                "\n" + "Series: " + series +
-                "\n" + "Cards: " + printedtotal + "/" + total
+
+        """Set name: $nombre
+    Series: $series
+    Cards: $printedtotal/$total""".also { tview.text = it }
+
+        Glide.with(applicationContext).load(set?.images?.symbol).into(iview)
 
 
         val CinputStream = assets.open("json/cards/en/" + id + ".json")
