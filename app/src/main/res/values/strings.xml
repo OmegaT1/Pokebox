@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Pokebox</string>
+    <string name="pokebox_logo">Pokebox Logo</string>
+    <string name="buscar_por_sets">Buscar por sets</string>
+    <string name="b_squeda_avanzada">Búsqueda Avanzada</string>
+    <string name="progreso_sets">Progreso sets</string>
+    <string name="comprobar_mazo">Comprobar mazo</string>
+    <string name="buscar_cartas">Buscar Cartas</string>
+    <string name="mis_colecciones">Mis Colecciones</string>
 </resources>

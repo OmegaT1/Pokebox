@@ -5,12 +5,11 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.ListSetsSearch"
-    android:background="@color/Background">
+    tools:context=".DEBUG_ListFilters">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/tbarSetList"
-        android:layout_width="match_parent"
+        android:id="@+id/tbarDEBUG"
+        android:layout_width="408dp"
         android:layout_height="wrap_content"
         android:background="@color/DarkSecondary"
         android:minHeight="?attr/actionBarSize"
@@ -18,13 +17,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rviewsetsearch"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="?attr/actionBarSize"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,6 @@
 package com.example.pokebox.data
 
-class CardRepository {
+object CardRepository {
     private var allCards: MutableList<PokemonCard> = mutableListOf()
 
     fun addCards(cards: List<PokemonCard>) {

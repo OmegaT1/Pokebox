@@ -27,7 +27,7 @@ class ListCardsSearchAdapter (
         val cardSupertype: TextView = itemView.findViewById(R.id.CardSuperType)
 
         fun bind(card: PokemonCard) {
-            Glide.with(context).load(card.images?.small).override(100,100).into(cardImage)
+            Glide.with(context).load(card.images?.small).fitCenter().into(cardImage)
             cardName.text = card.name
             cardNumber.text = "${card.number}/${set.printedTotal}"
             cardRarity.text = card.rarity

@@ -10,14 +10,23 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_pokebox"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_pokebox_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pokebox"
         tools:targetApi="31">
         <activity
-            android:name=".activities.MainMenu"
+            android:name=".activities.AdvancedSearch"
+            android:exported="false" />
+        <activity
+            android:name=".activities.LoadingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DEBUG_ListFilters"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".activities.ListCardsSearch"
@@ -26,7 +35,7 @@
             android:name=".activities.ListSetsSearch"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainMenu"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
