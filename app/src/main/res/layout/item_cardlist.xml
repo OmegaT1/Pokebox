@@ -22,8 +22,6 @@
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
         android:contentDescription="Card Image"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <LinearLayout
