@@ -20,7 +20,7 @@
 
     <Button
         android:id="@+id/btListSets"
-        style="@style/itemtext"
+        style="@style/text"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -33,7 +33,7 @@
 
     <Button
         android:id="@+id/btAdvSearch"
-        style="@style/itemtext"
+        style="@style/text"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -46,7 +46,7 @@
 
     <Button
         android:id="@+id/btListSetsPerc"
-        style="@style/itemtext"
+        style="@style/text"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -59,7 +59,7 @@
 
     <Button
         android:id="@+id/btCompMazo"
-        style="@style/itemtext"
+        style="@style/text"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -72,7 +72,7 @@
 
     <TextView
         android:id="@+id/tvbuscarcartas"
-        style="@style/itemtextbold"
+        style="@style/textbold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
@@ -85,7 +85,7 @@
 
     <TextView
         android:id="@+id/tvmiscolecciones"
-        style="@style/itemtextbold"
+        style="@style/textbold"
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:layout_marginStart="64dp"

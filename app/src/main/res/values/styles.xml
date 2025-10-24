@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="itemtextbold">
+    <style name="textbold">
 
         <item name="android:textColor">@color/white</item>
         <item name="android:textStyle">bold</item>
@@ -10,11 +10,29 @@
 
     </style>
 
-    <style name="itemtext">
+    <style name="textboldbig">
+
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:fontFamily">@fonts/montserrat_bold</item>
+
+    </style>
+
+    <style name="text">
 
         <item name="android:textColor">@color/white</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@fonts/montserrat_regular</item>
+
+    </style>
+
+    <style name="textbig">
+
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">25sp</item>
         <item name="android:fontFamily">@fonts/montserrat_regular</item>
 
     </style>

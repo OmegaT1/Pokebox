@@ -1,5 +1,6 @@
 package com.example.pokebox.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -44,7 +45,11 @@ class ListCardsSearch : AppCompatActivity() {
             rview.setPadding(16, 16, 16, 16)
 
             rview.adapter = ListCardsSearchAdapter(this, set, cards) { selectedCard ->
-                Toast.makeText(this, "Pulsado: ${selectedCard.name}", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, "Pulsado: ${selectedCard.name}", Toast.LENGTH_SHORT).show()
+
+                val i = Intent(this, ViewCard::class.java)
+                i.putExtra("pcard", selectedCard)
+                this.startActivity(i)
             }
 
 

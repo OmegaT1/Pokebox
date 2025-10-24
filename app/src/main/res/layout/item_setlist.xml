@@ -41,7 +41,7 @@
             android:layout_gravity="center"
             android:textAlignment="center"
             android:layout_weight="7"
-            style="@style/itemtextbold"/>
+            style="@style/textbold"/>
 
         <TextView
             android:id="@+id/SetCards"
@@ -50,7 +50,7 @@
             android:layout_gravity="center"
             android:textAlignment="center"
             android:layout_weight="4"
-            style="@style/itemtextbold"/>
+            style="@style/textbold"/>
 
     </LinearLayout>
 

@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="120dp"
+    android:layout_height="150dp"
+    android:layout_margin="5dp"
+    android:background="@drawable/rounded_item_background"
     android:orientation="horizontal"
-    android:layout_margin="10dp"
-    android:paddingTop="15dp"
-    android:paddingBottom="15dp"
-    android:paddingStart="15dp"
-    android:paddingEnd="15dp"
-    android:background="@drawable/rounded_item_background">
+    android:paddingStart="10dp"
+    android:paddingTop="10dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="10dp">
 
     <ImageView
         android:id="@+id/CardImage"
@@ -19,63 +18,84 @@
         android:layout_gravity="center_vertical"
         android:layout_marginStart="20dp"
         android:layout_weight="2"
-        android:scaleType="fitCenter"
         android:adjustViewBounds="true"
         android:contentDescription="Card Image"
+        android:scaleType="fitCenter"
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="4"
         android:orientation="vertical"
         android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:layout_gravity="center"
-        android:layout_weight="4">
+        android:paddingRight="15dp">
 
         <TextView
             android:id="@+id/CardSuperType"
+            style="@style/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textAlignment="center"
-            style="@style/itemtext"/>
+            android:textAlignment="center" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/CardName"
+                style="@style/textbold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="20dp"
                 android:layout_gravity="center"
-                android:textAlignment="center"
-                style="@style/itemtextbold"/>
+                android:layout_marginEnd="20dp"
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/CardNumber"
+                style="@style/textbold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textAlignment="center"
-                style="@style/itemtextbold"/>
+                android:textAlignment="center" />
 
         </LinearLayout>
 
         <TextView
             android:id="@+id/CardRarity"
+            style="@style/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textAlignment="center"
-            style="@style/itemtext"/>
+            android:textAlignment="center" />
 
     </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_weight="2">
+
+        <TextView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:text="0"
+            android:textSize="20sp"
+            style="@style/textbold"
+            android:textAlignment="center"
+            android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+
 
 </LinearLayout>

@@ -41,7 +41,7 @@ class ListSetsSearch : AppCompatActivity() {
         rview.setPadding(16, 16, 16, 16)
 
         rview.adapter = ListSetsSearchAdapter(this, sets) { selectedSet ->
-            Toast.makeText(this, "Pulsado: ${selectedSet.name}", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this, "Pulsado: ${selectedSet.name}", Toast.LENGTH_SHORT).show()
 
             val i = Intent(this, ListCardsSearch::class.java)
             i.putExtra("pset", selectedSet)
